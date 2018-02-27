@@ -1,0 +1,62 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+#selectedMedia {
+  font-family: "Open Sans", sans-serif;
+  width: 840px;
+  margin: 0 auto;
+  padding: 10px;
+  min-height: 42px;
+}
+
+#p1-h1 {
+  font-family: "Playfair Display", serif;
+}
+
+.choose-h4 {
+  font-family: "Open Sans", sans-serif;
+}
+
+/* #selection {
+  min-height: 22px;
+} */
+
+ul.list-sources {
+  width: 840px;
+  padding: 0px;
+  margin: 0 auto;
+  display: block;
+}
+
+li.source {
+  font-family: "Open Sans", sans-serif;
+  width: 200px;
+  height: 200px;
+  float: left;
+  text-align: center;
+  list-style: none;
+  margin: 5px;
+  background-size: cover;
+  /* background-color: red; */
+  cursor: pointer;
+  border-radius: 5px;
+  overflow: hidden;
+}
+li.source .source-overlay {
+  transition: all 0.5s ease-in-out;
+  display: flex;
+  opacity: 0;
+  height: 100%;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+li.source .source-overlay p {
+  width: 100%;
+  text-align: center;
+}
+li.source:hover .source-overlay {
+  opacity: 1;
+}
