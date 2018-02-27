@@ -7,6 +7,7 @@ import style from "./style.css";
 
 class App extends Component {
   state = {
+    currentPage: "media",
     newsMedia: [],
     loading: true,
     selectedMedia: []
@@ -39,6 +40,23 @@ class App extends Component {
     }
     this.setState({ selectedMedia: selectedMedia });
   }
+  renderPages() {
+    if (this.state.currentPage === "media") {
+      return (
+        <Media
+          newsMedia={this.state.newsMedia}
+          selectedMedia={this.state.selectedMedia}
+          onSourceClick={source => this.handleClickOnSource(source)}
+        />
+      );
+    } else if (this.state.currentPage === "search") {
+      return <Search />;
+    } else if (this.state.currentPage === "results") {
+      return <Results />;
+    } else {
+      return null;
+    }
+  }
   render() {
     if (this.state.loading) {
       return (
@@ -52,11 +70,10 @@ class App extends Component {
         <h1 style={{ textAlign: "center" }} id="p1-h1">
           News Search
         </h1>
-        <Media
-          newsMedia={this.state.newsMedia}
-          selectedMedia={this.state.selectedMedia}
-          onSourceClick={source => this.handleClickOnSource(source)}
-        />
+        <button onClick={() => this.setState({ currentPage: "search" })}>
+          Next
+        </button>
+        {this.renderPages()}
       </div>
     );
   }
