@@ -19,9 +19,9 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
-/* #selection {
+#selection {
   min-height: 22px;
-} */
+}
 
 ul.list-sources {
   width: 840px;
@@ -59,4 +59,76 @@ li.source .source-overlay p {
 }
 li.source:hover .source-overlay {
   opacity: 1;
+}
+#clearListButton-Media {
+  margin-right: 5px;
+}
+#searchNews {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  padding-top: 180px;
+  box-sizing: border-box;
+}
+#searchPage {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  padding-top: 180px;
+  box-sizing: border-box;
+}
+
+#inputSearchPage {
+  margin: 0 auto;
+  text-align: center;
+}
+#inputSearch {
+  height: 20px;
+  width: 380px;
+}
+
+#buttonBackSearchPage {
+  padding: 5px 16px 6px 16px;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+#buttonSearch-SearchPage {
+  padding: 5px 16px 6px 16px;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+#buttonBackResultsPage {
+  padding: 5px 16px 6px 16px;
+  border-radius: 5px;
+  margin-left: 15px;
+  margin-top: 15px;
+}
+#resultsPageBGColor {
+  background-color: #9c9c9c0d;
+}
+#articlesContainer {
+  padding: 15px;
+}
+#imgContainer {
+  padding-top: 10px;
+}
+#newsBoxResultsPage {
+  display: flex;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0px 8px 13px -8px rgba(0, 0, 0, 0.75);
+  background-color: white;
+}
+
+#textContainerResultsPage {
+  padding-left: 15px;
+}
+#newsResultsImg {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
